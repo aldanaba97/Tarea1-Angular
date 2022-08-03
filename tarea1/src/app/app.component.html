@@ -1,0 +1,22 @@
+
+<h2 align="center">COSTO DE LAS PERSONAS INSCRIPTAS</h2>
+<div class="container" *ngIf="element"  >
+
+<table id="tabla" >
+ <tr>
+   <th>Nombre</th>
+   <th>Costo</th>
+ </tr>
+ <tr *ngFor="let persona of tablaCostos" align="center">
+   <td>{{persona.nombre}}</td>
+   <td>{{persona.costo}}</td>
+ </tr>
+</table>
+</div>
+<div *ngIf="element == false"><h2>No hay datos para mostrar</h2></div>
+<div *ngIf="element == false"><button (click)="element=true" mat-raised-button color="primary">Mirar Tabla</button></div>
+<div *ngIf="element == true"><button (click)="element=false" mat-raised-button color="primary">Ocultar tabla</button></div>
+
+
+
+
